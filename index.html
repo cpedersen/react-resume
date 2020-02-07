@@ -19,16 +19,13 @@
     src="https://unpkg.com/babel-standalone@6/babel.min.js">
   </script>
   <script type="text/babel">
-    const sally_email = 'mailto:sally.student@gmail.com?subject=Link%20Here%20Link%20There';
-
-
     function App(props) {
         console.log(props)
         return (
-          <main id='resume-id' className='resume-class'>
+          <main id='border-id' className='border-class'>
           <section>
             <header>
-              <h1>Sally Student</h1>
+              <h1>{props.name}</h1>
             </header>
             <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" className='sally-pic' alt="Sally Student photo"/>
             <address>
@@ -40,7 +37,7 @@
             </address>
             <nav>
               <ul className='ul-class'>
-                <li><em><a href={sally_email}>sally.student@gmail.com</a></em>
+                <li><em><a href={props.email_link}>{props.email}</a></em>
                 </li>
               </ul>
             </nav>
@@ -82,14 +79,17 @@
             </ul>
           </section>
 
-          <footer>@2020 Sally A. Student</footer>
+          <footer>@2020 {props.name}</footer>
           </main>
         );
     };
 
     ReactDOM.render(
-        <App>
-        </App>,
+        <App
+          name='Sally A. Student'
+          email='sally.student@gmail.com'
+          email_link = 'mailto:sally.student@gmail.com?subject=Link%20Here%20Link%20There'
+        />,
         document.querySelector('#application-root')
     );
 
