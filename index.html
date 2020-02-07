@@ -19,23 +19,74 @@
     src="https://unpkg.com/babel-standalone@6/babel.min.js">
   </script>
   <script type="text/babel">
+    const sally_email = 'mailto:sally.student@gmail.com?subject=Link%20Here%20Link%20There';
     function App(props) {
         console.log(props)
         return (
-            <main id='resume-id' className='resume-class'>
-                <h1>Hello, everyone!</h1>
-                <p>We think</p>
-                <ul>
-                    <li>React</li>
-                    <li>is</li>
-                    <li>brilliant!</li>
-                </ul>
-            </main>
+          <main id='resume-id' className='resume-class'>
+          <section>
+            <header>
+              <h1>Sally Student</h1>
+            </header>
+            <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" className='sally-pic' alt="Sally Student photo"/>
+            <address>
+              <ul className='ul-class'>
+                <li>100 Main Street</li>
+                <li>Boston, MA 02222</li>
+                <li>617-955-1555</li>
+              </ul>
+            </address>
+            <nav>
+              <ul className='ul-class'>
+                <li><em><a href={sally_email}>sally.student@gmail.com</a></em>
+                </li>
+              </ul>
+            </nav>
+
+          </section>
+
+          <section>
+            <header>
+              <h2>Software Developer</h2>
+            </header>
+            <ul>
+              <li>Technically adept professional valued for ability to develop user-friendly Web-based applications.</li>
+            </ul>
+          </section>
+
+          <section>
+            <header>
+              <h2>Experience</h2>
+            </header>
+            <ul className='ul-class'>
+              <li><strong>ABC Company (Sometown, MA)</strong></li>
+              <li><em>Senior Software Developer, 5/18 to Present</em></li>
+              <li>Created next generation user interface for network security tool.</li> 
+            </ul>
+            <ul className='ul-class'>
+              <li><strong>XYZ Company (Sometown, KS)</strong></li>
+              <li><em>Software Developer, 5/10 to 5/18</em></li>
+              <li>Created automation tools used to qualify product.</li>
+            </ul>
+          </section>
+
+          <section>
+            <header>
+              <h2>Education</h2>
+            </header>
+            <ul className='ul-class'>
+              <li><strong>XYZ College (Sometown, KS)</strong></li>
+              <li>Bachelor of Science in Political Science</li>
+            </ul>
+          </section>
+
+          <footer>@ 2019 Sally A. Student</footer>
+          </main>
         );
     };
 
     ReactDOM.render(
-        <App className='resume-class'>
+        <App>
         </App>,
         document.querySelector('#application-root')
     );

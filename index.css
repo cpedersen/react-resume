@@ -3,3 +3,13 @@ body {
   border: 1px solid black;
   padding: 30px;
 }
+
+
+.ul-class {
+  list-style: none;
+}
+
+.sally-pic {
+  width: 200px;
+  height: 200px;
+}
