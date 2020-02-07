@@ -1,15 +1,27 @@
 body {
   background-color: white;
-  border: 1px solid black;
   padding: 30px;
+  border: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+}
 
 .ul-class {
   list-style: none;
+  padding-left: 20px;
+
 }
 
 .sally-pic {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+}
+
+@media screen and (min-width: 400px) {
+  .sally-pic {
+    width: 200px;
+  }
 }
